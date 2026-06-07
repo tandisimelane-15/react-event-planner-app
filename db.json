@@ -1,104 +1,114 @@
 {
-    "data" : [
-        {
-    "id": 1,
-    "title": "React Group Presentation",
-    "date": "2026-06-15",
-    "time": "10:00 AM",
-    "location": "Online",
-    "category": "School",
-    "status": "Upcoming",
-    "description": "Final group presentation for the React module."
-  },
-  {
-    "id": 2,
-    "title": "JavaScript Study Session",
-    "date": "2026-06-18",
-    "time": "2:00 PM",
-    "location": "Moringa Campus Lab 2",
-    "category": "School",
-    "status": "Upcoming",
-    "description": "Peer-led revision session covering JavaScript fundamentals and DOM manipulation."
-  },
-  {
-    "id": 3,
-    "title": "Portfolio Review",
-    "date": "2026-06-22",
-    "time": "11:30 AM",
-    "location": "Online",
-    "category": "Career",
-    "status": "Upcoming",
-    "description": "Review personal portfolio projects and receive feedback from mentors."
-  },
-  {
-    "id": 4,
-    "title": "Project Planning Meeting",
-    "date": "2026-06-25",
-    "time": "9:00 AM",
-    "location": "Google Meet",
-    "category": "Work",
-    "status": "Upcoming",
-    "description": "Plan tasks, timelines, and responsibilities for the event planner app project."
-  },
-  {
-    "id": 5,
-    "title": "Tech Networking Meetup",
-    "date": "2026-06-28",
-    "time": "5:30 PM",
-    "location": "Nairobi Garage",
-    "category": "Networking",
-    "status": "Upcoming",
-    "description": "Meet local developers, share project ideas, and learn about internship opportunities."
-  },
-  {
-    "id": 6,
-    "title": "UI Design Workshop",
-    "date": "2026-07-02",
-    "time": "1:00 PM",
-    "location": "Moringa Campus Room 4",
-    "category": "Workshop",
-    "status": "Upcoming",
-    "description": "Hands-on workshop focused on wireframes, layouts, and responsive UI design."
-  },
-  {
-    "id": 7,
-    "title": "API Integration Practice",
-    "date": "2026-07-05",
-    "time": "3:00 PM",
-    "location": "Online",
-    "category": "School",
-    "status": "Upcoming",
-    "description": "Practice fetching, posting, updating, and deleting event data using a REST API."
-  },
-  {
-    "id": 8,
-    "title": "Community Hack Night",
-    "date": "2026-07-10",
-    "time": "6:00 PM",
-    "location": "iHub Nairobi",
-    "category": "Community",
-    "status": "Upcoming",
-    "description": "Collaborative evening for building small apps, testing ideas, and improving coding skills."
-  },
-  {
-    "id": 9,
-    "title": "Sprint Demo Day",
-    "date": "2026-07-14",
-    "time": "12:00 PM",
-    "location": "Moringa Campus Auditorium",
-    "category": "School",
-    "status": "Upcoming",
-    "description": "Present completed sprint features and discuss improvements with classmates and instructors."
-  },
-  {
-    "id": 10,
-    "title": "Graduation Prep Meeting",
-    "date": "2026-07-20",
-    "time": "4:00 PM",
-    "location": "Online",
-    "category": "School",
-    "status": "Upcoming",
-    "description": "Prepare final requirements, presentation notes, and project submission details for graduation."
-  }
-    ]
+  "data": [
+    {
+      "id": 1,
+      "title": "React Group Presentation",
+      "date": "2026-06-15",
+      "time": "10:00 AM",
+      "location": "Online",
+      "category": "School",
+      "status": "Upcoming",
+      "description": "Final group presentation for the React module."
+    },
+    {
+      "id": 2,
+      "title": "JavaScript Study Session",
+      "date": "2026-06-18",
+      "time": "2:00 PM",
+      "location": "Moringa Campus Lab 2",
+      "category": "School",
+      "status": "Upcoming",
+      "description": "Peer-led revision session covering JavaScript fundamentals and DOM manipulation."
+    },
+    {
+      "id": 3,
+      "title": "Portfolio Review",
+      "date": "2026-06-22",
+      "time": "11:30 AM",
+      "location": "Online",
+      "category": "Career",
+      "status": "Upcoming",
+      "description": "Review personal portfolio projects and receive feedback from mentors."
+    },
+    {
+      "id": 4,
+      "title": "Project Planning Meeting",
+      "date": "2026-06-25",
+      "time": "9:00 AM",
+      "location": "Google Meet",
+      "category": "Work",
+      "status": "Upcoming",
+      "description": "Plan tasks, timelines, and responsibilities for the event planner app project."
+    },
+    {
+      "id": 5,
+      "title": "Tech Networking Meetup",
+      "date": "2026-06-28",
+      "time": "5:30 PM",
+      "location": "Nairobi Garage",
+      "category": "Networking",
+      "status": "Upcoming",
+      "description": "Meet local developers, share project ideas, and learn about internship opportunities."
+    },
+    {
+      "id": 6,
+      "title": "UI Design Workshop",
+      "date": "2026-07-02",
+      "time": "1:00 PM",
+      "location": "Moringa Campus Room 4",
+      "category": "Workshop",
+      "status": "Upcoming",
+      "description": "Hands-on workshop focused on wireframes, layouts, and responsive UI design."
+    },
+    {
+      "id": 7,
+      "title": "API Integration Practice",
+      "date": "2026-07-05",
+      "time": "3:00 PM",
+      "location": "Online",
+      "category": "School",
+      "status": "Upcoming",
+      "description": "Practice fetching, posting, updating, and deleting event data using a REST API."
+    },
+    {
+      "id": 8,
+      "title": "Community Hack Night",
+      "date": "2026-07-10",
+      "time": "6:00 PM",
+      "location": "iHub Nairobi",
+      "category": "Community",
+      "status": "Upcoming",
+      "description": "Collaborative evening for building small apps, testing ideas, and improving coding skills."
+    },
+    {
+      "id": 9,
+      "title": "Sprint Demo Day",
+      "date": "2026-07-14",
+      "time": "12:00 PM",
+      "location": "Moringa Campus Auditorium",
+      "category": "School",
+      "status": "Upcoming",
+      "description": "Present completed sprint features and discuss improvements with classmates and instructors."
+    },
+    {
+      "id": 10,
+      "title": "Graduation Prep Meeting",
+      "date": "2026-07-20",
+      "time": "4:00 PM",
+      "location": "Online",
+      "category": "School",
+      "status": "Upcoming",
+      "description": "Prepare final requirements, presentation notes, and project submission details for graduation."
+    },
+    {
+      "title": "Campus Hangout",
+      "date": "2026-06-07",
+      "time": "23:22",
+      "location": "Online",
+      "category": "School",
+      "status": "Ongoing",
+      "description": "Just hanging out ",
+      "id": 11
+    }
+  ]
 }
