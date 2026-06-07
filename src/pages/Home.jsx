@@ -31,9 +31,6 @@ function Home({ events, loading, error, onStatusChange, onDelete }) {
             simple dashboard.
           </p>
         </div>
-        <Link className="button" to="/add-event">
-          Add event
-        </Link>
       </div>
 
       <section className="filters" aria-label="Event filters">
