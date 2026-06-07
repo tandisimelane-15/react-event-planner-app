@@ -1,117 +1,137 @@
 import { useState } from "react";
 
-{/*create EventForm component*/}
+const initialFormData = {
+  title: "",
+  date: "",
+  time: "",
+  location: "",
+  category: "School",
+  status: "Upcoming",
+  description: "",
+};
+
+const CATEGORIES = [
+  "School",
+  "Career",
+  "Work",
+  "Networking",
+  "Workshop",
+  "Community",
+  "Personal",
+  "Birthday",
+];
+
+const STATUSES = ["Upcoming", "Ongoing", "Completed", "Cancelled"];
+
 function EventForm({ onSubmit }) {
-    const [formData, setFormData] = useState({
-        title: "",
-        date: "",
-        time: "",
-        location: "",
-        category: "School",
-        status: "Upcoming",
-        description: ""
-    })
+  const [formData, setFormData] = useState(initialFormData);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
 
-    function handleChange(e) {
-        setFormData({ ...formData, [e.target.name]: e.target.value })
-    }
+  function handleChange(e) {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
 
-    function handleSubmit(e) {
-        e.preventDefault()
-        onSubmit(formData)
-        setFormData({
-            title: "",
-            date: "",
-            time: "",
-            location: "",
-            category: "School",
-            status: "Upcoming",
-            description: ""
-        })
-    }
-    {/*What user sees returned on the screen*/}
-    return (
-        <form onSubmit={handleSubmit}>
-        {/*Title field*/}
-            <label>Event Title</label>
-            <input
-                type="text"
-                name="title"
-                value={formData.title}
-                onChange={handleChange}
-                required
-                />
+  function handleSubmit(e) {
+    e.preventDefault();
+    setSaving(true);
+    setError("");
 
-        {/*Date field*/}
-            <label>Date</label>
-            <input
-                type="date"
-                name="date"
-                value={formData.date}
-                onChange={handleChange}
-                required
-                />
+    onSubmit(formData)
+      .then(() => setFormData(initialFormData))
+      .catch(() => setError("Failed to save event. Please try again."))
+      .finally(() => setSaving(false));
+  }
 
-        {/*Time field*/}
-            <label>Time</label>
-            <input
-                type="time"
-                name="time"
-                value={formData.time}
-                onChange={handleChange}
-                required
-                />
+  return (
+    <form className="event-form" onSubmit={handleSubmit}>
+      {error && <p className="form-message form-message--error">{error}</p>}
 
-        {/*Location field*/}
-            <label>Location</label>
-            <input
-                type="text"
-                name="location"
-                value={formData.location}
-                onChange={handleChange}
-                required
-                />
+      <label>
+        Event title
+        <input
+          type="text"
+          name="title"
+          value={formData.title}
+          onChange={handleChange}
+          required
+        />
+      </label>
 
-        {/*Category field*/}
-            <label>Category</label>
-            <select
-                name="Category"
-                value={formData.category}
-                onChange={handleChange}  
-            >
-                <option value="School">School</option>
-                <option value="Work">Work</option>
-                <option value="Personal">Personal</option>
-                <option value="Community">Community</option>
-                <option value="Birthday">Birthday</option>
-            </select>
+      <div className="form-row">
+        <label>
+          Date
+          <input
+            type="date"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+            required
+          />
+        </label>
 
-        {/*Status label*/}
-            <label>Status</label>
-            <select
-                name="status"
-                value={formData.status}
-                onChange={handleChange}
-            >
-                <option value="Upcoming">Upcoming</option>
-                <option value="Ongoing">Ongoing</option>
-                <option value="Completed">Completed</option>
-                <option value="Cancelled">Cancelled</option>
-            </select>
-        
-        {/*Description field*/}
-            <label>Description</label>
-            <textarea
-                name="description"
-                value={formData.description}
-                onChange={handleChange}
-                required
-            />
+        <label>
+          Time
+          <input
+            type="time"
+            name="time"
+            value={formData.time}
+            onChange={handleChange}
+            required
+          />
+        </label>
+      </div>
 
-            <button type="submit">Add Event</button>
+      <label>
+        Location
+        <input
+          type="text"
+          name="location"
+          value={formData.location}
+          onChange={handleChange}
+          required
+        />
+      </label>
 
-        </form>
-    )
+      <div className="form-row">
+        <label>
+          Category
+          <select name="category" value={formData.category} onChange={handleChange}>
+            {CATEGORIES.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label>
+          Status
+          <select name="status" value={formData.status} onChange={handleChange}>
+            {STATUSES.map((status) => (
+              <option key={status} value={status}>
+                {status}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      <label>
+        Description
+        <textarea
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          required
+        />
+      </label>
+
+      <button className="button" type="submit" disabled={saving}>
+        {saving ? "Saving..." : "Add event"}
+      </button>
+    </form>
+  );
 }
 
 export default EventForm;
