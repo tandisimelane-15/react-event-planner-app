@@ -99,16 +99,6 @@
       "category": "School",
       "status": "Upcoming",
       "description": "Prepare final requirements, presentation notes, and project submission details for graduation."
-    },
-    {
-      "title": "Campus Hangout",
-      "date": "2026-06-07",
-      "time": "23:22",
-      "location": "Online",
-      "category": "School",
-      "status": "Ongoing",
-      "description": "Just hanging out ",
-      "id": 11
     }
   ]
 }

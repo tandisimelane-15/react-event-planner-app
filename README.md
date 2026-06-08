@@ -4,7 +4,7 @@
 Event Planner is a Single Page Application (SPA) built with React that allows users to create and manage upcoming events. Users can view all events displayed as cards, add new events through a form, view full event details, update event status, delete events and filter events by category or status without reloading the page.
 
 ## Screenshot
-<img src="src/assets/screenshot.png" alt="Event Planner App" width="350"/>
+<img src="src/assets/screenshot.png" alt="Event Planner App" width="800"/>
 
 ## Features
 - View all events displayed as cards on the home page
